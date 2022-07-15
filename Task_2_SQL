@@ -1,0 +1,6 @@
+В задании описана ситуация, когда таблицы продуктов (Products) и категорий (Categories) связаны отношением "многие-ко-многим". 
+Насколько мне известно, на практике такое не получится реализовать без вспомогательной таблицы, 
+которая будет связана отношениями "один-ко-многим" с двумя предыдущими (пусть она называется ProductsCategories). 
+Тогда в запросе будет достаточно получить таблицу Products и с помощью Left join присоединить к ней ProductsCategories
+
+select * from Products left join ProductsCategories on Products.IdProduct = ProductsCategories.IdProduct;
